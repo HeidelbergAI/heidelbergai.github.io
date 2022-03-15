@@ -1,2 +1,8 @@
 // Import Core Clean Blog SCSS
 @import "../assets/vendor/startbootstrap-clean-blog/scss/styles.scss";
+// Changing how a font is defined!
+// Overwrite for .page-heading h1 with values in {} rem
+// .page-heading h1 {
+//     font-weight: 100;
+//     font-size: 0.5rem !important;
+// }
