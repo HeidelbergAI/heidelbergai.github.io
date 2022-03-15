@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 gem "jekyll", ">= 3.8.5"
 
+# ruby 3.0 does not have this pre-installed
+gem "webrick"
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-paginate", "~> 1.1.0"
