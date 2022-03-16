@@ -1,6 +1,44 @@
 # HeidelbergAI Website
-1. How to add a new Event?
-2. How to update Main Page?
+Home: `index.html` for text and `_layouts/home.html` for html stuff.
+Events: `posts/index.htmls`
+Members: MeetUP
+About: `about.html` 
+Youtube: Youtube
+
+1. How to add a future Event?
+   1. Create a html file in `_posts` 
+   2. Write everyting down.
+   3. Announce (this could be done via index.html and a preview of newest Event)
+2. What to do after Event?
+   1. Change `future_date: False` in the event-file
+   2. Embed slides and/or video
+3. How to update Main Page?
+   1. How many People in Meetup?
+
+## Event Descriptor
+```
+---
+layout: post
+title: "Official NeurIPS Meetups"
+subtitle: "by Freiburg AI and Heidelberg AI"
+custom_date: "December 7-10, 2021" # Multiple Days
+time: 7pm # time shown on landing page
+date: 2021-12-07
+background: '/img/posts/logo.png'
+future_date: False # True if upcoming
+layer_shift: True
+---
+```
+
+
+Documentation for Bootstrap:
+- https://getbootstrap.com/docs/4.0/components/navbar/
+
+
+## Leftover ToDos:
+- Add Google site verification (and analytics?)
+- Add different logos for navbar (black for white background)
+
 
 
 # [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
