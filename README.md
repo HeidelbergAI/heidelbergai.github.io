@@ -38,6 +38,7 @@ Documentation for Bootstrap:
 ## Leftover ToDos:
 - Add Google site verification (and analytics?)
 - Add different logos for navbar (black for white background)
+- Put it online (+ How to do that?)
 
 
 

@@ -18,12 +18,12 @@ layout: default
           <div class="page-heading">
             <!-- outcomment website -->
             <!-- <h1>{{ site.title }}</h1> --> 
-            {% if site.description %}
+            <!-- {% if site.description %}
             <span class="subheading">{{ site.description }}</span>
             {% endif %}
             {% if site.event %}
             <h3>{{ site.event }}</h3>
-            {% endif %}
+            {% endif %} -->
 
             <!-- comment br's out for final version -->
             <br><br>
@@ -39,7 +39,9 @@ layout: default
               {% endif %}
               , {{post.time}}
             </h2>
+            <br>
             <h2 class="post-title">{{ post.title }}</h2>
+            <br>
             <h3 class="post-subtitle">{{ post.subtitle }}</h3>
             <br>
             <!-- this is Button to newest event. -->
@@ -76,7 +78,8 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        {% for post in site.posts limit : 1 %}
+        <!-- Possible View of newest event -->
+        <!-- {% for post in site.posts limit : 1 %}
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -88,16 +91,10 @@ layout: default
             {% endif %}
           </a>
           <p class="post-meta">Posted by
-            <!-- {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            on -->
             {{ post.date | date: '%B %d, %Y' }}           
           </p>
         </article>
-        {% endfor %}
+        {% endfor %} -->
 
         {{ content }}
 
