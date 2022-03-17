@@ -37,8 +37,14 @@ Documentation for Bootstrap:
 
 ## Leftover ToDos:
 - Add Google site verification (and analytics?)
-- Add different logos for navbar (black for white background)
+- Add different logos for navbar (black for white background)?
+  - if time left
 - Put it online (+ How to do that?)
+  - It is online  by default under: https://github.com/HeidelbergAI/website_v2/settings/pages 
+  - Future:
+    - change domain name:
+      - Settings > Pages > Custom Domain [insert name]
+  - Q: What to do with google-site-verification?
 
 
 

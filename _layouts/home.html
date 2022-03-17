@@ -31,44 +31,30 @@ layout: default
             <!-- can be commented out -->
 
             <!-- Automate Creation of Dates -->
-            <h2>
-              {% if post.custom_date %}
-                    {{ post.custom_date}}
-              {% else %}
-                    {{ post.date | date: '%B %d, %Y' }}
-              {% endif %}
-              , {{post.time}}
-            </h2>
-            <br>
-            <h2 class="post-title">{{ post.title }}</h2>
-            <br>
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            <br>
-            <!-- this is Button to newest event. -->
-            <!-- v1 -->
-              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Go to event</a>
-            <!-- v2 -->
-            <!-- <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"> <button type="button" class="btn btn-outline-light"> Go to event</button></a> -->
-            <!-- <article class="post-preview">
-              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+              {% if post.future_date %}
+                <!-- Automatatic creation of announcement if future_date -->
+                <h2>
+                  {% if post.custom_date %}
+                        {{ post.custom_date}}
+                  {% else %}
+                        {{ post.date | date: '%B %d, %Y' }}
+                  {% endif %}
+                  , {{post.time}}
+                </h2>
+                <br>
                 <h2 class="post-title">{{ post.title }}</h2>
-                {% if post.subtitle %}
+                <br>
                 <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-                {% else %}
-                <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-                {% endif %}
-              </a>
-              <p class="post-meta">Posted by
-                {% if post.author %}
-                {{ post.author }}
-                {% else %}
-                {{ site.author }}
-                {% endif %}
-                on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-              </p>
-            </article> -->
+                <br>
+                <!-- this is Button to newest event. -->
+                <!-- v1 -->
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Go to event</a>
+              {% else %}
+                <h2>Next event is in preprocessing...</h2>
+                <br><br>
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Last event</a>
+              {% endif %}
             {% endfor %}
-            <!-- <a href="{{"/2021/12/07/neurips.html" | relative_url }}" class="btn">Go to event</a> -->
           </div>
         </div>
       </div>
