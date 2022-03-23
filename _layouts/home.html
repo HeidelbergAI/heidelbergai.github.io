@@ -33,26 +33,27 @@ layout: default
             <!-- Automate Creation of Dates -->
               {% if post.future_date %}
                 <!-- Automatatic creation of announcement if future_date -->
-                <h2>
+                <h3>
                   {% if post.custom_date %}
                         {{ post.custom_date}}
                   {% else %}
                         {{ post.date | date: '%B %d, %Y' }}
                   {% endif %}
-                  , {{post.time}}
-                </h2>
+                   {{post.time}}
+                </h3>
+                <br>
                 <br>
                 <h2 class="post-title">{{ post.title }}</h2>
                 <br>
-                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                <h4 class="post-subtitle">{{ post.subtitle }}</h4>
                 <br>
                 <!-- this is Button to newest event. -->
                 <!-- v1 -->
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Go to event</a>
               {% else %}
-                <h2>Next event is in preprocessing...</h2>
+                <h2>Next event is preprocessing...</h2>
                 <br><br>
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Last event</a>
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Latest event</a>
               {% endif %}
             {% endfor %}
           </div>
