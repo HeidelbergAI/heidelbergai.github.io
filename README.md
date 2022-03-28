@@ -1,4 +1,4 @@
-# HeidelbergAI Website
+# heidelberg.ai website
 Home: `index.html` for text and `_layouts/home.html` for html stuff.
 Events: `posts/index.htmls`
 Members: MeetUP
@@ -38,12 +38,7 @@ Documentation for Bootstrap:
 ## Leftover ToDos:
 - Add Google site verification (and analytics?)
 - Add different logos for navbar (black for white background)?
-  - if time left
-- Put it online (+ How to do that?)
-  - It is online  by default under: https://github.com/HeidelbergAI/website_v2/settings/pages 
-  - Future:
-    - change domain name:
-      - Settings > Pages > Custom Domain [insert name]
+- Questions:
   - Q: What to do with google-site-verification?
 
 

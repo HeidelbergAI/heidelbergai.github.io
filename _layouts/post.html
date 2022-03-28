@@ -20,10 +20,19 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
+            <span class="meta">
+              <!-- Posted by -->
+              <!-- <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> -->
+              {% if page.future_date %}
+                upcoming:
+              {% endif %}
+              {% if page.custom_date %}
+                {{ page.custom_date}}
+              {% else %}
+                {{ page.date | date: '%B %d, %Y' }}
+              {% endif %}
+              <!-- on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
+              content=page.content %} -->
             </span>
           </div>
         </div>

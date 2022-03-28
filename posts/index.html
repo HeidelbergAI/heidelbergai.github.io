@@ -29,16 +29,29 @@ background: "https://78.media.tumblr.com/23eeea1415bc929a2e849fcc4dd2168b/tumblr
     <!-- Info about this on: https://stackoverflow.com/questions/46672231/in-jekyll-how-to-show-posts-from-last-week -->
     <!-- {{ 'now' | date: "%Y" }} -->
     {% if post.future_date %}
+      <font color=#0085A1>
         upcoming:
-    {% endif %}
-    {% if post.custom_date %}
-          {{ post.custom_date}}
-    {% else %}
-          {{ post.date | date: '%B %d, %Y' }}
-    {% endif %}
-    {% if post.future_date %}
-      {% if post.time %}
-        {{post.time}}
+        {% if post.custom_date %}
+              {{ post.custom_date}}
+        {% else %}
+              {{ post.date | date: '%B %d, %Y' }}
+        {% endif %}
+        {% if post.future_date %}
+          {% if post.time %}
+            {{post.time}}
+          {% endif %}
+        {% endif %}
+      </font>
+    {% else %} 
+      {% if post.custom_date %}
+            {{ post.custom_date}}
+      {% else %}
+            {{ post.date | date: '%B %d, %Y' }}
+      {% endif %}
+      {% if post.future_date %}
+        {% if post.time %}
+          {{post.time}}
+        {% endif %}
       {% endif %}
     {% endif %}
   </p>
