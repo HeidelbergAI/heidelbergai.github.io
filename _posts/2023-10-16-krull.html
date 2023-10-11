@@ -1,0 +1,131 @@
+---
+layout: post
+title: "Image denoising and the generative accumulation of photons"
+subtitle: "Alexander Krull,  School of Computer Science, University of Birmingham"
+custom_date: "October 16th 2023 @ 11am"
+date: 2023-10-16
+background: '/img/posts/microscopy_banner_pexels-chokniti-khongchum-3938022.jpg'
+future_date: True
+layer_shift: True
+---
+
+We would like to welcome you all to the next online talk in our joint Heidelberg.ai / NCT Data Science Seminar series. 
+
+<h2 class="section-heading">Online-only Event</h2><br> 
+
+We are excited to have Alexander Krull.
+He is a lecturer at the School of Computer Science of the University of Birmingham in the UK.
+His research focuses on denoising of microscopy images, especially in the context of generative models.
+<br>
+<br>
+
+
+Monday, Oct 16th, 11 am
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://us02web.zoom.us/meeting/register/tZIkdu-gpzkvE9BHpkPV7-97Pj7Q2xdJUfEv" style="font-weight: bold; text-decoration: underline; color: #0000FF;">Zoom Registration</a>
+
+
+<!-- <br> -->
+
+<!-- TODO once talk is uploaded
+<h2 class="section-heading">Event Recording</h2><br>
+
+<iframe width="800" height="480" src="https://www.youtube.com/embed/zevj234NsBM?si=0BT3Qv2xqWyywSaK&amp;start=1" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+<h2 class="section-heading">Abstract</h2>
+<p>
+<!-- Put Abstract Here -->
+Shot noise is a fundamental property of many imaging applications, especially in fluorescence microscopy. Removing this noise is an ill-defined problem since many clean solutions exist for a single noisy image. Traditional approaches aiming to map a noisy image to its clean counterpart usually find the minimum mean square error (MMSE) solution,i.e. , they predict the expected value of the posterior distribution of possible clean images. We present a fresh perspective on shot noise corrupted images and noise removal. By viewing image formation as the sequential accumulation of photons on a detector grid, we show that a network trained to predict the where the next photon could arrive is in fact solving the traditional MMSE denoising task. This new perspective allows us to make three contributions:
+(i) We present a new strategy for self-supervised denoising. (ii) We present a new method for sampling from the posterior of possible solutions by iteratively sampling and adding small numbers of photons to the image. (iii) We derive a full generative model by starting this process from an empty canvas."
+
+</p>
+
+<h2 class="section-heading">Biography</h2>
+<p>
+  <!-- Put Biography Here -->
+  
+  <a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/krull-alexander.aspx" style="text-decoration: underline; color: #0000FF;">Dr. Alexander Krull</a>  is a lecturer at the University of Birmingham in the United Kingdom. His research focuses on denoising of microscopy images, especially in the application of generative models in this context.
+After his PhD in computer vision in Carsten Rother's lab in Dresden, Alexander took a postdoc position at the Max Planck Institute of Molecular Cell Biology and Genetics, in Florian Jug's lab.
+He developed readily applicable self-supervised donoising methods (including Noise2Void and DivNoising) that are used research labs around the world.
+In 2020 Alexander began his position as lecturer at the University of Birmingham.
+He has published papers at computer vision and machine learning conferences (ECCV, ICCV, CVPR, ICLR), as well as in various scientific journals, focusing on life-science and imaging techniques.
+
+
+</p>
+
+<div style="width:100%">
+  <br>
+  <center>
+    <a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/krull-alexander.aspx"><img src="/img/posts/2023-10-16-Krull.jpg" width="90%"></a> <br><br>
+      <a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/krull-alexander.aspx" style="text-decoration: underline">Dr. Alexander Krull</a>
+  </center>
+</div>
+
+<!-- Table with all important information in one Place! -->
+<h2 class="section-heading">Event Info</h2>
+<p>
+Please help us plan ahead by registrating for the event via Zoom:
+<!-- ADD MEETUP LINK -->
+<br>
+<a href="https://dkfz-de.zoom.us/meeting/register/u5Urd-iopjMvE9M_jv-9OVi5zZFbcIaX0LLs#/registration" style="text-decoration: underline">
+  Zoom Registration
+</a>. <br> <br>
+</p>
+<!-- <div class="row">
+    <center> -->
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-0lax">What?</th>
+        <th class="tg-0lax">{{ page.title}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0lax">Who?</td>
+        <td class="tg-0lax">{{ page.subtitle}}</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">When?</td>
+        <td class="tg-0lax">{{ page.custom_date}}</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax">Where?</td>
+        <td class="tg-0lax">Zoom</td>
+      </tr>
+      <!-- <tr>
+        <td class="tg-0lax">Livestream</td>
+        <td class="tg-0lax"><a href="https://us02web.zoom.us/j/5824790176">Zoom</a></td>
+      </tr> -->
+      <tr>
+        <td class="tg-0lax">Registration</td>
+        <td class="tg-0lax">
+          <!-- ADD MEETUP LINK -->
+          <a href="https://dkfz-de.zoom.us/meeting/register/u5Urd-iopjMvE9M_jv-9OVi5zZFbcIaX0LLs#/registration" style="text-decoration: underline">
+            Zoom Registration
+          </a>
+          </td>
+      </tr>
+    </tbody>
+    </table>
+  <!-- <h2 class="section-heading">Corona rules</h2>
+  <p>
+      We are happy to see that so many of you are interested in this event! 
+    To allow as many people as possible to attend it, the following rules apply: <br>
+    Attendance requires proof of 3G corona status and wearing a FFP2 mask is mandatory throughout the whole event.
+  </p> -->
+    <!-- </center> -->
+<!-- </div> -->
+<!-- <h2 class="section-heading">Event's recording</h2><br>
+
+<iframe width="800" height="480" src="https://www.youtube.com/embed/At4rhuKu84o" frameborder="0"
+    allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
