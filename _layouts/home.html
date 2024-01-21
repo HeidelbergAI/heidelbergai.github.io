@@ -27,7 +27,8 @@ layout: default
 
             <!-- comment br's out for final version -->
             <br><br>
-            {% for post in site.posts limit : 1 %}
+            {% assign future_date = false %}
+            {% for post in site.posts reversed %}
             <!-- can be commented out -->
 
             <!-- Automate Creation of Dates -->
@@ -50,12 +51,15 @@ layout: default
                 <!-- this is Button to newest event. -->
                 <!-- v1 -->
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Go to event</a>
-              {% else %}
-                <h2>Next event is preprocessing...</h2>
-                <br><br>
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Latest event</a>
+                {% assign future_date = true %}
+                {% break %}
               {% endif %}
             {% endfor %}
+            {% if future_date == false %}
+              <h2>Next event is preprocessing...</h2>
+              <br><br>
+              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-outline-light">Latest event</a>
+            {% endif %}
           </div>
         </div>
       </div>
