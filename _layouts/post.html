@@ -31,9 +31,11 @@ layout: default
               {% else %}
                 {{ page.date | date: '%B %d, %Y' }}
               {% endif %}
+              {% if page.online_event %}
               <br>
               <br>
-              <h4 class="subsubheading"><img src="/img/utils/livestream-high-res.png" width="5%"> Online Event</h4>
+                <h4 class="subsubheading"><img src="/img/utils/livestream-high-res.png" width="5%"> Online Event</h4>
+              {% endif %}
               <!-- on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %} -->
             </span>
